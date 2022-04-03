@@ -4,6 +4,7 @@ import { useQuestions } from "../../hooks/useQuestions";
 import { QuestionsList } from "../../types/questions";
 import QuizAnswer from "./QuizAnswer";
 import QuizError from "./QuizError";
+import QuizNext from "./QuizNext";
 
 interface Props {
   questionsList: QuestionsList;
@@ -45,6 +46,7 @@ const Quiz: React.FC<Props> = ({ questionsList }) => {
         })}
       </QList>
       <QuizError error={error} />
+      <QuizNext />
     </Q>
   );
 };
