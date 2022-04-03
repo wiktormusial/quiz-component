@@ -1,9 +1,13 @@
 import Quiz from "./components/Quiz";
-import { questionsList } from "./data/questionsList";
 import "./App.css";
+import { questionsList } from "./data/questionsList";
 
 const App = () => {
-  return <Quiz questionsList={questionsList} />;
+  if (questionsList) {
+    return <Quiz questionsList={questionsList} />;
+  } else {
+    return <div>Loading</div>;
+  }
 };
 
 export default App;
