@@ -6,6 +6,8 @@ interface QuizProps {
 
 const QE = styled.p`
   padding: 5px;
+  font-weight: bold;
+  color: #ef5350;
 `;
 
 const QuizError: React.FC<QuizProps> = ({ error }) => {

@@ -11,7 +11,10 @@ interface Props {
 
 const Ans = styled.li`
   border-radius: 5px;
-  padding: 5px;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+  padding-left: 1.5em;
+  cursor: pointer;
 `;
 
 const QuizAnswer: React.FC<Props> = ({ answer, setError, error }) => {
@@ -22,9 +25,11 @@ const QuizAnswer: React.FC<Props> = ({ answer, setError, error }) => {
       if (error) {
         setError("");
       }
-      ref.current!.style.borderColor = "green";
-      ref.current!.style.border = "1px";
-      ref.current!.style.borderStyle = "solid";
+      ref.current!.style.boxShadow =
+        "box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)";
+      ref.current!.style.background = "#4caf50";
+      ref.current!.style.fontWeight = "bold";
+      ref.current!.style.color = "white";
     } else {
       setError("Answer is not correct");
     }

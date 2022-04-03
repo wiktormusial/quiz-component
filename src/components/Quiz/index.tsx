@@ -11,9 +11,11 @@ interface Props {
 
 const Q = styled.div`
   padding: 10px;
+  margin: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   width: fit-content;
-  border: 1px solid black;
   border-radius: 5px;
+  background: white;
 `;
 
 const QHeader = styled.h1``;
