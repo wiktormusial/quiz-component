@@ -1,5 +1,6 @@
 import { useQuestions } from "../../hooks/useQuestions";
 import { QuestionsList } from "../../types/questions";
+import QuizAnswer from "./QuizAnswer";
 
 interface Props {
   questionsList: QuestionsList;
@@ -13,7 +14,7 @@ const Quiz: React.FC<Props> = ({ questionsList }) => {
       <h1>{title}</h1>
       <ul>
         {answers.map((item) => {
-          return <li key={item.answer}>{item.answer}</li>;
+          return <QuizAnswer key={item.answer} answer={item} />;
         })}
       </ul>
     </div>
